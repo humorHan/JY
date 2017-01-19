@@ -1,0 +1,58 @@
+@import "./common/_color.scss";
+
+.caseListBg{
+  height: 463px;
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+
+.case{
+  float: left;
+  position: relative;
+  height:320px;
+  width: 590px;
+  overflow: hidden;
+  & > a{
+    height: 100%;
+    width: 100%;
+    & > img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .case-mask{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    .all-title-wrap{
+      color: $white;
+    }
+    .all-title-wrap{
+      margin-top: 123px;
+    }
+    .title{
+      letter-spacing: 6px;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0 26px;
+    }
+    .subTitle{
+      letter-spacing: 4px;
+      margin-top: 14px;
+    }
+    .title-line{
+      width: 36px;
+      height: 2px;
+      background-color: $white;
+    }
+  }
+  &:hover{
+    img{
+      transition: all 0.8s;
+      transform: scale(1.03);
+    }
+  }
+}

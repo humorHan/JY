@@ -1,0 +1,28 @@
+@()(implicit pageParam: views.params.PageParam)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @pageMeta()
+    <title>【酱印网】案例频道总页</title>
+    <link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+@newPageHeader()
+
+<div class="content">
+    <div class="caseListBg"></div>
+    <div class="cases-wrap w1200 auto">
+        <div class="center mt30 mb40">
+            <span class="floor-line block middle"></span>
+            <span class="font24 black bold ml30 mr30 middle">经典案例</span>
+            <span class="floor-line block middle"></span>
+        </div>
+        <ul class="cases clearFix"></ul>
+        <img class="mt40 mb40" src="/assets/img/be-friends.png"/>
+    </div>
+</div>
+
+@newPageFooter()
+</body>
+</html>

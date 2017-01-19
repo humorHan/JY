@@ -1,0 +1,19 @@
+@(example: services.PrintService.ExampleDetail)(implicit pageParam: views.params.PageParam, config: play.api.Configuration)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @pageMeta(description = example.description)
+  <title>@example.title</title>
+  <link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+@newPageHeader()
+
+<div class="content">
+  @caseDetailContent(example)
+</div>
+
+@newPageFooter()
+</body>
+</html>

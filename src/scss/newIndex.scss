@@ -1,0 +1,125 @@
+@import "./common/_color.scss";
+
+.content{
+  background-color: $bg;
+  .index-banner{
+    height: 480px;
+    margin: 0 auto;
+  }
+  .cooperative-partner-wrap{
+    padding: 60px 0;
+  }
+  .cooperative-partner{
+    margin-top: 40px;
+  }
+}
+
+.floor-content{
+  & > li {
+    width: 240px;
+    height: 240px;
+    box-sizing: border-box;
+    &.w480 {
+      width: 480px;
+    }
+    .floor-carousel-flag{
+      height: 240px;
+    }
+  }
+  .borderL{
+    border-left: 1px solid $border;
+  }
+  .borderB{
+    border-bottom: 1px solid $border;
+  }
+  .borderT{
+    border-top: 1px solid $border;
+  }
+  .border-box{
+    height: 240px;
+    width: 240px;
+    box-sizing: border-box;
+  }
+  .carousel-wrapper .carousel-nav li{
+    margin-left: 5px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: $border;
+    &.active{
+      background-color: $red;
+    }
+  }
+  &.floor-style3{
+    .border-box{
+      height: 241px;
+    }
+  }
+}
+
+.custom-case{
+  font-size: 0;
+  li{
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 290px;
+    & > a{
+      height: 100%;
+      width: 100%;
+      & > img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    & + li{
+      margin-left: 13px;
+    }
+    &:hover{
+      .part1{
+        display: none;
+      }
+      .part2{
+        display: block;
+      }
+    }
+  }
+}
+.line-height46{
+  line-height: 46px;
+}
+.case-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: $white;
+  letter-spacing: 3px;
+  .subTitle{
+    border-top: 1px solid $white;
+    width: 170px;
+    margin: 0 auto;
+    padding: 7px 0;
+  }
+  .describe{
+    width: 240px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+}
+
+.activity-wrap{
+  background-color: $white;
+}
+.stop-send{
+  padding: 5px 10px;
+  text-align: left;
+  color: #f00;
+  background:#fffbf2;
+  border:1px solid #f6c788;
+  border-top:none;
+}

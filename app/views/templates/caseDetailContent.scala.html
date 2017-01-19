@@ -1,0 +1,57 @@
+@(example: services.PrintService.ExampleDetail)(implicit config: play.api.Configuration)
+
+<div class="case-detail-bg-wrap">
+    <div style="background:url(@example.backgroundUrl) center 0 no-repeat;height: 1168px;max-width: 1920px;">
+        <div class="w1200 auto relative clearFix">
+            <div class="case-wrap">
+                <p class="case-title font30 bold">@example.title</p>
+                <div class="case-description font16">@example.description</div>
+            </div>
+            <div class="case-fake-border"></div>
+            @if(!example.products.isEmpty){
+                <div class="materiel-wrap">
+                    <p class="font24 mb20 bold spacing2">物料品单</p>
+                    <ul class="materiel">
+                        @for(product <- example.products) {
+                            <li class="relative">
+                                <a class="block" href="@product.url">
+                                    <img src="@product.imageUrl"/>
+                                    <div class="item-name mask center font14">
+                                        @product.name
+                                    </div>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+            @if(!example.designs.isEmpty){
+                <div class="design-wrap">
+                    <p class="font24 mb20 bold spacing2">设计项目</p>
+                    <ul class="design">
+                        @for(design <- example.designs) {
+                            <li class="relative">
+                                <img src="@design.imageUrl"/>
+                                <div class="item-name mask center font14">
+                                    @design.name
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="case-content w1200 auto">
+    @Html(example.content)
+</div>
+
+<div class="company-bg w1200 auto" style="background:#FFF url(@example.custom.backgroundUrl) center 0 no-repeat;">
+    <img class="company-logo block top" src="@example.custom.logoUrl"/>
+    <div class="company-description block top white">
+        <div class="mb10 font18 bold">@example.custom.name</div>
+        <div style="max-width: 910px;">@example.custom.description</div>
+    </div>
+</div>
